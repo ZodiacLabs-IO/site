@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 import withStyles from '@material-ui/styles/withStyles';
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
-import { products } from './AllProducts';
+import Button from '@material-ui/core/Button';
+import { products } from './All';
 
 const styles = (theme) => ({
   paper: {
@@ -76,16 +77,24 @@ const CardItem = (props) => {
       <Paper className={classes.paper}>
         <div className={classes.itemContainer}>
           <div className={classes.avatarContainer}>
-            <img className={classes.img} src={products[3].imgPath} alt={products[3].label} />
+            <img className={classes.img} src={products[1].imgPath} alt={products[1].label} />
           </div>
           <div className={classes.baseline}>
             <div className={classes.inline}>
               <Typography style={{ textTransform: 'uppercase' }} color="secondary" gutterBottom>
-                                    Antitrademark
+                                    FashionLab
               </Typography>
               <Typography variant="body1" color="secondary" gutterBottom>
-                {products[3].description}
+                {products[1].description}
               </Typography>
+              {products[1].link &&
+                <Button variant="outlined">
+                  <a target="_blank"
+                     rel="noopener noreferrer"
+                     href={products[1].link}>
+                    Visit website
+                  </a>
+                </Button>}
             </div>
           </div>
         </div>

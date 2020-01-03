@@ -9,7 +9,7 @@ import SwipeableViews from 'react-swipeable-views';
 import MobileStepper from '@material-ui/core/MobileStepper';
 import { autoPlay } from 'react-swipeable-views-utils';
 import BaseDialog from './BaseDialog';
-import { products } from '../products/AllProducts';
+import { products } from '../portfolio/All';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
@@ -65,9 +65,6 @@ class SwipeDialog extends Component {
       // eslint-disable-next-line react/jsx-props-no-spreading
       <BaseDialog {...this.props}>
         <div className={classes.container}>
-          <div className={classes.gutterBottom}>
-            {/* <img width={100} src={logo} alt="" /> */}
-          </div>
           <div>
             <AutoPlaySwipeableViews
               axis="x"
@@ -110,7 +107,7 @@ class SwipeDialog extends Component {
           </div>
           <div>
             <Button component={Link} to="/products" variant="contained" onClick={this.handleClose} color="primary" autoFocus>
-                All Products
+                Full Portfolio
             </Button>
           </div>
         </div>

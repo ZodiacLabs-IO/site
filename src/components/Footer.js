@@ -24,7 +24,10 @@ const styles = (theme) => ({
     justifyContent: 'space-between',
     alignItems: 'flex-start',
   },
-  link: { textDecoration: 'none', color: 'inherit' },
+  link: {
+    textDecoration: 'none',
+    color: 'inherit',
+  },
   productLogo: {
     display: 'inline-block',
     borderLeft: `1px solid ${theme.palette.grey.A100}`,
@@ -45,18 +48,16 @@ const Footer = (props) => {
       <Grid item xs={12} className={classes.flex}>
         <Typography variant="body1" color="inherit" noWrap>
           <Link to="/" className={classes.link}>
-            {
-        /* <img width={20} src={logo} alt="" /> */}
             <span>
-        FashionLab
+            Zodiac Labs
             </span>
           </Link>
         </Typography>
         <Typography variant="body1" color="inherit" noWrap>
-          <span>© 2019</span>
+          <span>© 2020</span>
         </Typography>
         <Typography variant="body1" color="inherit" noWrap>
-          <span>fashionlab.ai</span>
+          <span>ZodiacLabs.io</span>
         </Typography>
       </Grid>
     </div>

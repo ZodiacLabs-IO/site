@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import withStyles from '@material-ui/styles/withStyles';
-import { Link, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
@@ -75,8 +75,17 @@ class AboutUs extends Component {
                   <div className={classes.block}>
                     <Typography variant="h6" gutterBottom>About Us</Typography>
                     <Typography variant="body1">
-                      FashionLab is developed in New York City by a team with background in fashion,
-                      design, brand management, machine learning, and software engineering.
+                      Zodiac Labs, Inc., is a early stage business incubator base in New York City.
+                    </Typography>
+                  </div>
+                </div>
+              </Grid>
+              <Grid item xs={12}>
+                <div className={classes.topBar}>
+                  <div className={classes.block}>
+                    <Typography variant="h6" gutterBottom>Who we are</Typography>
+                    <Typography variant="body1">
+                    Some stuff about us and our roles.
                     </Typography>
                   </div>
                 </div>
@@ -85,9 +94,6 @@ class AboutUs extends Component {
                 <Grid item xs={12}>
                   <div className={classes.topBar}>
                     <div>
-                      <Button variant="outlined" component={Link} to="/signup" className={classes.outlinedButtom}>
-                        Sign Up
-                      </Button>
                       <Button variant="outlined" className={classes.outlinedButtom}>
                         Email us
                       </Button>

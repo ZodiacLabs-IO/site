@@ -8,12 +8,8 @@ const Menu = [
     pathname: '/about',
   },
   {
-    label: 'Products',
-    pathname: '/products',
-  },
-  {
-    label: 'Signup',
-    pathname: '/signup',
+    label: 'Portfolio',
+    pathname: '/portfolio',
   },
   // {
   //   label: "Github",

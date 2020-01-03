@@ -4,11 +4,8 @@ import PropTypes from 'prop-types';
 import withStyles from '@material-ui/styles/withStyles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
-import Antitrademark from './products/Antitrademark';
-import Blender from './products/Blender';
-import Brandeye from './products/Brandeye';
-import Distinct from './products/Distinct';
-import Seasons from './products/Seasons';
+import FashionLab from './portfolio/FashionLab';
+import FlyAway from './portfolio/FlyAway';
 import Topbar from './Topbar';
 import Footer from './Footer';
 import SectionHeader from './SectionHeader';
@@ -40,12 +37,9 @@ const Products = (props) => {
         <Grid container justify="center">
           <Grid spacing={10} alignItems="center" justify="center" container className={classes.grid}>
             <Grid item xs={12}>
-              <SectionHeader title="Products" subtitle="An overview of our suite of products." />
-              <Blender />
-              <Seasons />
-              <Distinct />
-              <Antitrademark />
-              <Brandeye />
+              <SectionHeader title="Portfolio" subtitle="An overview of the companies we are actively incubating." />
+              <FlyAway />
+              <FashionLab />
             </Grid>
           </Grid>
         </Grid>

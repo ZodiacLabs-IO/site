@@ -128,7 +128,7 @@ class Main extends Component {
     super(props);
     this.state = {
       aboutUsDialog: false,
-      productsDialog: false,
+      portfolioDialog: false,
       contactDialog: false,
     };
   }
@@ -139,8 +139,8 @@ class Main extends Component {
     this.setState({ aboutUsDialog: true });
   }
 
-  openProductsDialog = () => {
-    this.setState({ productsDialog: true });
+  openPortfolioDialog = () => {
+    this.setState({ portfolioDialog: true });
   }
 
   openContactDialog = () => {
@@ -150,14 +150,14 @@ class Main extends Component {
   dialogClose = () => {
     this.setState({
       aboutUsDialog: false,
-      productsDialog: false,
+      portfolioDialog: false,
       contactDialog: false,
     });
   }
 
   render() {
     const { classes } = this.props;
-    const { productsDialog, contactDialog } = this.state;
+    const { portfolioDialog, contactDialog } = this.state;
     return (
       <>
         <CssBaseline />
@@ -168,9 +168,11 @@ class Main extends Component {
               <Paper className={classes.paperMain}>
                 <div className={classes.boxMain}>
                   <Typography style={{ fontWeight: 'bold' }} variant="h2" className={classes.mainTitle} gutterBottom>
-                      Intelligent Design.
+                      NYC-based business incubator.
                   </Typography>
-                  <Typography variant="subtitle1" color="primary" gutterBottom />
+                  <Typography variant="h4" color="secondary" gutterBottom>
+                    Taking projects from ideation to series A.
+                  </Typography>
                 </div>
               </Paper>
             </Grid>
@@ -178,19 +180,15 @@ class Main extends Component {
               <Paper className={classes.paperDark}>
                 <div className={classes.box}>
                   <Typography variant="h6" className={classes.title} gutterBottom>
-                    Human Design. Machine Intelligence.
+                  Technology and Software
                   </Typography>
                   <Typography variant="subtitle1" gutterBottom color="primary">
-                    A.I. for fashion design, trend forecasting, and brand management.
-
-                    From trademark infringement detection to automated design
-                    portfolio development, our tools leverage state of the art
-                    machine learning models to deliver unique value.
+                    Zodiac Labs is a NYC based startup incubator focusing on software and technology projects.
                   </Typography>
                 </div>
                 <div className={classes.buttonBar}>
-                  <Button onClick={this.openProductsDialog} color="secondary" variant="contained" className={classes.actionButtom}>
-                    Products
+                  <Button onClick={this.openPortfolioDialog} color="secondary" variant="contained" className={classes.actionButtom}>
+                    Portfolio
                   </Button>
                 </div>
               </Paper>
@@ -199,12 +197,10 @@ class Main extends Component {
               <Paper className={classes.paper}>
                 <div className={classes.box}>
                   <Typography variant="h6" className={classes.titleLight} gutterBottom>
-                    Tailor-Made tools.
+                  Subtitle2
                   </Typography>
                   <Typography variant="body1" gutterBottom color="primary">
-                    FashionLab provides a platform to help designers, not replace them.
-
-                    Contact us to see how our tools can unlock your creative potential.
+                  Some other info
                   </Typography>
                 </div>
                 <div className={classes.buttonBar}>
@@ -219,7 +215,7 @@ class Main extends Component {
             </Grid>
           </Grid>
           <SwipeDialog
-            open={productsDialog}
+            open={portfolioDialog}
             onClose={this.dialogClose}
           />
           <InstructionDialog

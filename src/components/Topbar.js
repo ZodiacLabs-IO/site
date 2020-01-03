@@ -26,33 +26,53 @@ const styles = (theme) => ({
     backgroundColor: theme.palette.secondary.dark,
     color: theme.palette.primary.light,
   },
-  inline: { display: 'inline' },
+  inline: {
+    display: 'inline'
+  },
   flex: {
     display: 'flex',
     [theme.breakpoints.down('sm')]: {
       display: 'flex',
-      justifyContent: 'space-between',
+      flexDirection: 'row',
       alignItems: 'center',
     },
   },
-  link: { textDecoration: 'none', color: 'inherit' },
+  link: {
+    textDecoration: 'none',
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    color: 'inherit',
+    height: '100%',
+    [theme.breakpoints.up('md')]: { paddingTop: '0.8em' },
+  },
   productLogo: {
     display: 'inline-block',
     borderLeft: `1px solid ${theme.palette.grey.A100}`,
     marginLeft: 32,
     paddingLeft: 24,
-    [theme.breakpoints.up('md')]: { paddingTop: '1.5em' },
+    [theme.breakpoints.up('md')]: {
+      paddingTop: '1.5em',
+    },
   },
   tagline: {
     display: 'inline-block',
     marginLeft: 10,
-    [theme.breakpoints.up('md')]: { paddingTop: '0.8em' },
   },
-  iconContainer:
-      { display: 'none', [theme.breakpoints.down('sm')]: { display: 'block' } },
-  iconButton: { float: 'right' },
-  tabContainer:
-      { marginLeft: 32, [theme.breakpoints.down('sm')]: { display: 'none' } },
+  iconContainer: {
+    display: 'none',
+    [theme.breakpoints.down('sm')]: {
+      display: 'block',
+      marginLeft: 'auto',
+    }
+  },
+  iconButton: {
+    float: 'right',
+  },
+  tabContainer: {
+    marginLeft: 32,
+    [theme.breakpoints.down('sm')]: {display: 'none'}
+  },
   tabItem: {
     paddingTop: 20,
     paddingBottom: 20,
@@ -94,7 +114,7 @@ class Topbar extends Component {
     if (currentPath === '/about') {
       return 1;
     }
-    if (currentPath === '/products') {
+    if (currentPath === '/portfolio') {
       return 2;
     }
     if (currentPath === '/signup') {
@@ -110,23 +130,23 @@ class Topbar extends Component {
     return (
       <AppBar position="absolute" color="default" className={classes.appBar}>
         <Toolbar>
-          <Grid container spacing={10} alignItems="baseline">
+          <Grid container spacing={10} alignItems="center">
             <Grid item xs={12} className={classes.flex}>
               <div className={classes.inline}>
                 <Typography variant="h6" color="inherit" noWrap>
                   <Link to="/" className={classes.link}>
-                    {/* <img width={20} src={logo} alt="" /> */}
-                    <span className={classes.tagline}>FashionLab</span>
+                    <img width={30} height={30} src="zodiac.png" alt="" />
+                    <span className={classes.tagline}>Zodiac Labs</span>
                   </Link>
                 </Typography>
               </div>
               { !noTabs && (
                 <>
-                  {/* <div className={classes.productLogo}>
-                        <Typography>
-                          Intelligent Design
-                        </Typography>
-                      </div> */}
+                  <div className={classes.productLogo}>
+                      <Typography>
+                        Incubator
+                      </Typography>
+                    </div>
                   <div className={classes.iconContainer}>
                     <IconButton onClick={this.mobileMenuOpen} className={classes.iconButton} color="inherit" aria-label="Menu">
                       <MenuIcon />

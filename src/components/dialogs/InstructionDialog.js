@@ -29,14 +29,9 @@ class InstructionDialog extends Component {
       <BaseDialog {...this.props}>
         <div className={classes.bottomMargin}>
           <Typography variant="body2" gutterBottom>
-            Sign up to receive more information about our
-             ongoing product development, or send us an email
-             for a private demo.
+            Contact us
           </Typography>
         </div>
-        <Button component={Link} to="/signup" className={classes.bottomMargin} variant="contained" onClick={this.handleClose} color="primary" autoFocus>
-          Sign up
-        </Button>
         <Button component={Link} to="mailto:" variant="contained" onClick={this.handleClose} color="primary" autoFocus>
           Email Us
         </Button>
